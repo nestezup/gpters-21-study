@@ -22,7 +22,7 @@ const mappings: DocMapping[] = [
     source: "21기-스터디-상세페이지.md",
     target: "overview/index.md",
     title: "스터디 소개",
-    description: "망해도 괜찮아: 개발 환경 세팅 101 스터디 소개",
+    description: "실수가 자유로운 개발 연습장 만들기: 개발 환경 세팅 101 스터디 소개",
     order: 1,
   },
   {
@@ -144,7 +144,7 @@ title: "실수가 자유로운 개발 연습장 만들기"
 description: "바이브코딩 입문자를 위한 개발 환경 세팅 101 — GPTers 21기 스터디"
 template: splash
 hero:
-  tagline: "망해도 괜찮아 — 개발 환경 세팅 101"
+  tagline: "실수가 자유로운 개발 연습장 만들기 — 개발 환경 세팅 101"
   actions:
     - text: 스터디 소개 보기
       link: /overview/

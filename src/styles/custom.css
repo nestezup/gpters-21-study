@@ -28,4 +28,49 @@
 
 :root {
   --sl-font: 'Paperlogy', sans-serif;
+  --sl-sidebar-width: 20rem;
+  --sl-content-width: 60rem;
+}
+
+/* 본문 폰트 크기 키우기 */
+.sl-markdown-content p,
+.sl-markdown-content li,
+.sl-markdown-content td,
+.sl-markdown-content th,
+.sl-markdown-content blockquote {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* 오른쪽 사이드바(TOC) 폭 축소 */
+@media (min-width: 72rem) {
+  .right-sidebar-container {
+    width: 10rem !important;
+  }
+}
+
+/* 검색창을 오른쪽 테마 버튼 왼쪽으로 이동 */
+@media (min-width: 50rem) {
+  .header {
+    grid-template-columns: 1fr auto auto !important;
+  }
+  /* Search (column 2) → 오른쪽으로 */
+  .header > .sl-flex.print\:hidden:not(.right-group) {
+    order: 2;
+    justify-content: flex-end;
+  }
+  /* right-group (column 3) → 검색 오른쪽 */
+  .header > .right-group {
+    order: 3;
+  }
+}
+
+/* 테이블 셀 불필요한 줄바꿈 방지 */
+table th,
+table td {
+  white-space: nowrap;
+}
+table td:last-child,
+table th:last-child {
+  white-space: normal;
 }

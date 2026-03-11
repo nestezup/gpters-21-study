@@ -1,6 +1,6 @@
 ---
 title: "스터디 소개"
-description: "망해도 괜찮아: 개발 환경 세팅 101 스터디 소개"
+description: "실수가 자유로운 개발 연습장 만들기: 개발 환경 세팅 101 스터디 소개"
 sidebar:
   order: 1
 ---

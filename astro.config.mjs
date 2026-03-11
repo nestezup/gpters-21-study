@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: '실수가 자유로운 개발 연습장 만들기',
+			title: 'AI스터디 21기 개발환경셋팅 — 실수가 자유로운 개발 연습장 만들기',
 			customCss: ['./src/styles/custom.css'],
 			description: '바이브코딩 입문자를 위한 개발 환경 세팅 101 — GPTers 21기 스터디',
 			defaultLocale: 'ko',
@@ -51,6 +51,7 @@ export default defineConfig({
 					items: [
 						{ slug: 'bonus/ai-tools' },
 						{ slug: 'bonus/vibe-coding' },
+						{ slug: 'bonus/troubleshooting' },
 					],
 				},
 			],
