@@ -49,7 +49,7 @@
   }
 }
 
-/* 검색창을 오른쪽 테마 버튼 왼쪽으로 이동 */
+/* 검색창을 오른쪽 테마 버튼 왼쪽으로 이동 + 크기 확대 */
 @media (min-width: 50rem) {
   .header {
     grid-template-columns: 1fr auto auto !important;
@@ -62,6 +62,11 @@
   /* right-group (column 3) → 검색 오른쪽 */
   .header > .right-group {
     order: 3;
+  }
+  /* 검색 버튼 크기 확대 (기본 22rem → 30rem) */
+  site-search button[data-open-modal] {
+    max-width: 26rem !important;
+    min-width: 26rem;
   }
 }
 

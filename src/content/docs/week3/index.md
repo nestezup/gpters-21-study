@@ -230,17 +230,6 @@ docker system prune -a --volumes
 
 ## 9. 정리
 
-### 핵심 명령어 요약
-
-| 용도 | 명령어 |
-| :--- | :--- |
-| 서비스 실행 | `docker run [옵션] 이미지이름` |
-| 목록 확인 | `docker ps` |
-| 서비스 중지 | `docker stop 이름` |
-| 서비스 삭제 | `docker rm 이름` |
-| 이미지 삭제 | `docker rmi 이미지이름` |
-| 전체 초기화 | `docker system prune -a` |
-
 ### 작업 흐름 한눈에 보기
 
 ```

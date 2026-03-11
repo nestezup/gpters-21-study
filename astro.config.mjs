@@ -18,7 +18,6 @@ export default defineConfig({
 					items: [
 						{ slug: 'overview' },
 						{ slug: 'overview/master-guide' },
-						{ slug: 'overview/glossary' },
 						{ slug: 'overview/onboarding' },
 					],
 				},
@@ -41,7 +40,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: '4주차: 가상화',
+					label: '4주차: 플레이그라운드 완성',
 					items: [
 						{ slug: 'week4' },
 					],
@@ -51,6 +50,7 @@ export default defineConfig({
 					items: [
 						{ slug: 'bonus/ai-tools' },
 						{ slug: 'bonus/vibe-coding' },
+						{ slug: 'bonus/glossary' },
 						{ slug: 'bonus/troubleshooting' },
 					],
 				},
