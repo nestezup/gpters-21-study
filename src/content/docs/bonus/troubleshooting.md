@@ -418,6 +418,33 @@ bcdedit /set hypervisorlaunchtype auto  # Hyper-V 재활성화
 # 재부팅 필요
 ```
 
+### Hyper-V — Windows 11 설치 시 TPM 2.0 요구
+
+Hyper-V에서 Windows 11을 설치하려면 가상 TPM(vTPM)이 필요합니다. 2세대 VM에서만 지원됩니다.
+
+**VM 생성 시:**
+1. Hyper-V 관리자 → 새로 만들기 → 가상 컴퓨터
+2. 세대 지정: **2세대** 선택 (1세대는 TPM 미지원)
+3. VM 생성 완료 후 → 설정 → **보안** → **"신뢰할 수 있는 플랫폼 모듈 사용"** 체크
+
+**이미 만든 VM에 추가:**
+```powershell
+# VM을 종료한 상태에서 실행
+Set-VMSecurity -VMName "VM이름" -VirtualizationBasedSecurityOptOut $false
+Enable-VMTPM -VMName "VM이름"
+
+# 확인
+Get-VMSecurity -VMName "VM이름" | Select TpmEnabled
+# True가 나오면 성공
+```
+
+**요구 사항:**
+- **2세대 VM** 필수 (1세대 VM은 TPM 자체를 지원하지 않음)
+- 호스트 Windows 10 버전 1809 이상 또는 Windows 11
+- Secure Boot가 활성화되어 있어야 함 (2세대 VM 기본 활성)
+
+> 1세대 VM에서 Windows 11을 설치하려면 레지스트리 우회가 필요하지만 권장하지 않습니다. 처음부터 2세대 VM으로 만드세요.
+
 ### Hyper-V — Ubuntu 부팅 안 됨 (2세대 VM)
 
 Secure Boot 템플릿이 Windows 전용으로 설정되어 있습니다.
