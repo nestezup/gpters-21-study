@@ -3,6 +3,11 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
+	vite: {
+		preview: {
+			allowedHosts: ['21study.code-serendipity.com'],
+		},
+	},
 	integrations: [
 		starlight({
 			title: 'AI스터디 21기 개발환경셋팅 — 실수가 자유로운 개발 연습장 만들기',
